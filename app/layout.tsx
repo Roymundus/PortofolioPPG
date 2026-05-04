@@ -8,7 +8,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'E-Portfolio PPG - Mahasiswa Pendidikan Profesi Guru',
+  title: 'E-Portofolio PPG - Mahasiswa Pendidikan Profesi Guru',
   description: 'E-Portfolio refleksi mahasiswa PPG mencakup profil, analisis artefak pembelajaran, dan model guru profesional yang dituju',
   generator: 'v0.app',
   icons: {
