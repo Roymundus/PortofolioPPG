@@ -5,6 +5,7 @@ import './App.css';
 import ProfilSection from './components/ProfilSection';
 import ArtefakSection from './components/ArtefakSection';
 import RefleksiSection from './components/RefleksiSection';
+import DokumentasiSection from './components/DokumentasiSection'; 
 
 function App() {
   const [activeTab, setActiveTab] = useState('profil');
@@ -19,7 +20,7 @@ function App() {
       {/* NAVBAR ATAS */}
       <nav className="navbar">
         <div className="nav-brand">
-          <i className="fas fa-layer-group"></i> E-Portfolio
+          <i className="fas fa-layer-group"></i> E-Portofolio | Alpian Roymundus Siringo-ringo
         </div>
         <ul className="nav-links">
           <li>
@@ -46,6 +47,14 @@ function App() {
               <i className="fas fa-lightbulb"></i> Model Guru
             </a>
           </li>
+          <li>
+            <a 
+              className={activeTab === 'dokumentasi' ? 'active' : ''} 
+              onClick={() => handleNavigation('dokumentasi')}
+            >
+              <i className="fas fa-camera-retro"></i> Dokumentasi
+            </a>
+          </li>
         </ul>
       </nav>
 
@@ -54,6 +63,7 @@ function App() {
         {activeTab === 'profil' && <ProfilSection />}
         {activeTab === 'artefak' && <ArtefakSection />}
         {activeTab === 'refleksi' && <RefleksiSection />}
+        {activeTab === 'dokumentasi' && <DokumentasiSection />} {/* Menampilkan Komponen DokumentasiSection */}
       </main>
     </>
   );

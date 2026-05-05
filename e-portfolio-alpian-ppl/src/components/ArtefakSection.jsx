@@ -19,7 +19,7 @@ export default function ArtefakSection() {
       title: 'Modul Ajar / RPP',
       desc: 'Rencana pelaksanaan pembelajaran komprehensif berbasis Problem-Based Learning (PBL).',
       icon: 'fa-book-open',
-      embedUrl: 'https://docs.google.com/document/d/1LljdAUpWwQSd-Q5DkVU3f2yWjw1USQki/edit?usp=sharing&ouid=103779033745794569385&rtpof=true&sd=true'
+      embedUrl: 'https://drive.google.com/file/d/1rhiVlPlX0eKMRt0Ye-Ji0aasBSSYLs9n/preview'
     },
     media: {
       title: 'Media Pembelajaran',
@@ -170,11 +170,11 @@ export default function ArtefakSection() {
               key={key}
               onClick={() => setActiveAnalysis(key)}
               style={{
-                padding: '12px 24px',
+                padding: '10px 20px',
                 background: activeAnalysis === key ? '#2563eb' : '#ffffff',
                 color: activeAnalysis === key ? 'white' : '#64748b',
                 border: `1px solid ${activeAnalysis === key ? '#2563eb' : '#cbd5e1'}`,
-                borderRadius: '50px',
+                borderRadius: '8px',
                 cursor: 'pointer',
                 fontWeight: '600',
                 display: 'flex',
