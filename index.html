@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Portfolio PPL | Alpian Roymundus Siringo-ringo</title>
+    
+    <!-- Link ke Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link ke file CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body>
+
+    <nav class="sidebar">
+        <div class="profile-section">
+            <div class="profile-img">
+                <img src="bahan/avatar.jpg" alt="Avatar Alpian Roymundus Siringo-ringo" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%;">
+            </div>
+            <h2>Alpian Roymundus Siringo-ringo</h2>
+            <p>Mahasiswa PPG Prajabatan</p>
+        </div>
+        <ul class="nav-links">
+            <!-- Menambahkan parameter 'event' pada onclick -->
+            <li><a class="nav-item active" onclick="showSection(event, 'profil')"><i class="fas fa-home"></i> Beranda & Profil</a></li>
+            <li><a class="nav-item" onclick="showSection(event, 'artefak')"><i class="fas fa-folder-open"></i> Analisis Artefak</a></li>
+            <li><a class="nav-item" onclick="showSection(event, 'refleksi')"><i class="fas fa-chalkboard-teacher"></i> Model Guru</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        
+        <section id="profil" class="section active">
+            <h1>Profil Mahasiswa</h1>
+            
+            <h3>Asal dan Identitas</h3>
+            <p>Halo, selamat datang di E-Portfolio saya. Saya adalah <strong>Alpian Roymundus Siringo-ringo</strong>. Saya berasal dari <strong>Balikpapan</strong>, sebuah kota pesisir yang dikenal dengan geliat industri dan keberagaman masyarakatnya yang dinamis. Tumbuh di kota yang berkembang pesat ini menanamkan dalam diri saya kemampuan untuk beradaptasi, berkolaborasi, serta menghargai keteraturan dan efisiensi—nilai-nilai yang kini saya bawa dalam ruang kelas.</p>
+
+            <h3>Inspirasi & Tujuan Menjadi Guru Profesional</h3>
+            <p>Beranjak dari latar belakang keilmuan saya di bidang Informatika dan pengalaman mendampingi mahasiswa sebagai asisten praktikum, saya menyadari bahwa pendidikan adalah fondasi dari segala kemajuan teknologi. Inspirasi saya lahir dari keyakinan bahwa setiap peserta didik memiliki potensi logis yang bisa diasah. Saat ini, saya menempuh Pendidikan Profesi Guru (PPG) di <strong>Universitas Negeri Yogyakarta</strong> dengan tujuan mulia: menjadi guru yang tidak hanya mentransfer pengetahuan, tetapi juga mengintegrasikan pemikiran komputasional <i>(computational thinking)</i> dan pendekatan saintifik secara humanis.</p>
+            <p>Saya ingin merancang ekosistem kelas di mana siswa merasa aman untuk melakukan kesalahan, belajar dari proses, dan mampu memecahkan masalah nyata. Menjadi guru profesional bagi saya adalah komitmen untuk terus belajar (<i>lifelong learner</i>) dan berinovasi dalam pedagogi.</p>
+
+            <div class="quote-box">
+                "Pendidikan bukanlah proses mengisi wadah yang kosong, melainkan proses menyalakan api pikiran."<br>
+                <span style="font-size: 0.9rem; font-family: 'Inter', sans-serif; font-style: normal; color: #64748b; margin-top: 10px; display: block;">— Menginspirasi pendekatan konstruktivisme dalam pembelajaran saya.</span>
+            </div>
+        </section>
+
+        <section id="artefak" class="section">
+            <h1>Analisis Artefak & Perangkat Pembelajaran</h1>
+            <p>Bagian ini menyajikan refleksi mendalam terhadap produk rencana pembelajaran (RPP/Modul Ajar) dan implementasi praktik mengajar yang telah dilaksanakan selama kegiatan PPL Terbimbing.</p>
+
+            <div class="grid-cards">
+                <div class="card">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Kendala Penyusunan</h4>
+                    <p>Kendala utama yang dihadapi adalah menyelaraskan alokasi waktu dengan kedalaman materi, serta menentukan media interaktif digital yang paling tepat (mengingat tingkat literasi digital siswa yang beragam) agar tidak mendominasi waktu inti pembelajaran.</p>
+                </div>
+                
+                <div class="card">
+                    <h4><i class="fas fa-lightbulb"></i> Teori Pedagogi</h4>
+                    <p>Perangkat ini disusun dengan mengadopsi teori <strong>Konstruktivisme Vygotsky</strong> dan model <i>Problem-Based Learning (PBL)</i>. Fokusnya adalah <i>scaffolding</i>, di mana siswa difasilitasi untuk membangun pengetahuannya sendiri melalui diskusi dan pemecahan masalah nyata berbasis teknologi.</p>
+                </div>
+
+                <div class="card">
+                    <h4><i class="fas fa-chart-line"></i> Faktor Keberhasilan</h4>
+                    <p>Keberhasilan penerapan produk terlihat dari antusiasme dan partisipasi aktif siswa. Penggunaan media ajar visual yang terstruktur dengan baik berhasil menjembatani pemahaman siswa terhadap konsep yang abstrak, mendorong kolaborasi kelompok yang efektif.</p>
+                </div>
+
+                <div class="card">
+                    <h4><i class="fas fa-sync"></i> Modifikasi Kelas Berbeda</h4>
+                    <p>Jika diterapkan pada sekolah dengan fasilitas teknologi terbatas (<i>low-tech environment</i>), perangkat ini dapat dimodifikasi dengan mengganti media digital menjadi alat peraga manipulatif dari lingkungan sekitar, namun tetap mempertahankan sintaks <i>Problem-Based Learning</i>.</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 3rem; border-top: 1px solid #e2e8f0; padding-top: 2rem;">Lampiran Penilaian (Siklus 1 - 3)</h3>
+            <p>Berikut adalah hasil penilaian dari Guru Pamong dan Dosen Pembimbing Lapangan (DPL) yang merepresentasikan progres mengajar saya.</p>
+            
+            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                <a href="#" class="attachment-btn"><i class="fas fa-file-pdf"></i> Lampiran 7: Penilaian Perangkat Pembelajaran</a>
+                <a href="#" class="attachment-btn"><i class="fas fa-file-pdf"></i> Lampiran 8: Praktik Mengajar (Siklus 1-3)</a>
+            </div>
+            <p style="font-size: 0.85rem; color: #64748b; margin-top: 10px;"><i>*Tautan di atas akan diarahkan ke file Google Drive yang berisi lembar observasi dan rubrik yang telah diisi oleh Guru Pamong.</i></p>
+
+        </section>
+
+        <section id="refleksi" class="section">
+            <h1>Model Guru yang Dituju</h1>
+            
+            <h3>Misi Menuju Pendidik Profesional</h3>
+            <p>Menjadi guru profesional bukan sekadar mencapai target administratif, melainkan sebuah perjalanan transformasi diri yang berkelanjutan. Misi saya adalah:</p>
+            <ul style="margin-left: 20px; margin-bottom: 20px;">
+                <li>Menciptakan lingkungan belajar inklusif yang menghargai setiap kecerdasan majemuk peserta didik.</li>
+                <li>Mengintegrasikan literasi digital dan keterampilan abad 21 (4C: <i>Critical thinking, Creativity, Collaboration, Communication</i>) dalam setiap rancangan pembelajaran.</li>
+                <li>Melakukan refleksi diri secara berkala pasca-pembelajaran untuk perbaikan berkesinambungan.</li>
+            </ul>
+
+            <div class="grid-cards">
+                <div class="card">
+                    <h4><i class="fas fa-brain"></i> Kompetensi yang Dibangun</h4>
+                    <p>Saya menargetkan penguatan pada <strong>Kompetensi Pedagogik</strong> (manajemen kelas yang dinamis dan diferensiasi pembelajaran) serta <strong>Kompetensi Profesional</strong> (penguasaan materi esensial secara mendalam). Selain itu, saya terus melatih <strong>Kompetensi Sosial</strong> melalui komunikasi asertif dengan rekan sejawat dan wali murid.</p>
+                </div>
+                <div class="card">
+                    <h4><i class="fas fa-heart"></i> Karakter Ideal</h4>
+                    <p>Karakter utama yang ingin saya manifestasikan adalah guru yang <strong>Empatik, Adaptif, dan Tangguh</strong>. Seorang pendidik yang mampu mendengarkan siswa secara aktif, cepat menyesuaikan diri dengan disrupsi pendidikan, dan tidak mudah menyerah saat menghadapi dinamika peserta didik di kelas.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Link ke file JavaScript eksternal diletakkan tepat sebelum tag penutup body -->
+    <script src="script.js"></script>
+</body>
+</html>
