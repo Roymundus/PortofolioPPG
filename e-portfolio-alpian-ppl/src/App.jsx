@@ -19,7 +19,7 @@ function App() {
       {/* NAVBAR ATAS */}
       <nav className="navbar">
         <div className="nav-brand">
-          <i className="fas fa-layer-group"></i> E-Portfolio
+          <i className="fas fa-layer-group"></i> E-Portofolio | Alpian Roymundus Siringo-ringo
         </div>
         <ul className="nav-links">
           <li>
