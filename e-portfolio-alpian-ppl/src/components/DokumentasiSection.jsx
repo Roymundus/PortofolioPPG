@@ -1,79 +1,115 @@
-// Jika Anda sudah menyiapkan foto di folder assets, hapus tanda komentar pada baris import di bawah ini:
-// import foto1 from '../assets/dok-1.jpg';
-// import foto2 from '../assets/dok-2.jpg';
-// import foto3 from '../assets/dok-3.jpg';
+import 'react';
 
+// --- DIPINDAHKAN KE LUAR: KOMPONEN PEMBANTU UNTUK KARTU FOTO TUNGGAL ---
+const FotoCard = ({ title, desc }) => (
+  <div className="feature-box" style={{ padding: '0', overflow: 'hidden', borderLeft: 'none', display: 'flex', flexDirection: 'column' }}>
+    
+    {/* ⚠️ GANTI BAGIAN INI DENGAN TAG <img /> NANTI ⚠️ */}
+    <div style={{ width: '100%', height: '220px', backgroundColor: 'var(--border-color)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: 'var(--text-muted)' }}>
+       <i className="fas fa-image" style={{ fontSize: '2.5rem', marginBottom: '10px' }}></i>
+       <span style={{ fontSize: '0.8rem' }}>Tempat Foto (Rekomendasi Landscape)</span>
+    </div>
+    {/* ----------------------------------------------- */}
+
+    <div style={{ padding: '1.2rem' }}>
+      <h4 style={{ margin: '0 0 8px 0', fontSize: '1rem', color: 'var(--text-main)' }}>{title}</h4>
+      <p style={{ margin: '0', fontSize: '0.85rem', color: 'var(--text-muted)', lineHeight: '1.5' }}>{desc}</p>
+    </div>
+  </div>
+);
+
+// --- DIPINDAHKAN KE LUAR: KOMPONEN PEMBANTU UNTUK GALERI GRID (BANYAK FOTO) ---
+const FotoGaleri = () => (
+  /* ⚠️ GANTI BAGIAN INI DENGAN TAG <img /> NANTI ⚠️ */
+  <div style={{ width: '100%', height: '180px', borderRadius: '12px', backgroundColor: 'var(--border-color)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-muted)' }}>
+      <i className="fas fa-camera" style={{ fontSize: '2rem' }}></i>
+  </div>
+);
+
+
+// --- KOMPONEN UTAMA ---
 export default function DokumentasiSection() {
-  // Data dokumentasi (bisa Anda tambah atau kurangi sesuai kebutuhan)
-  const galeri = [
-    {
-      id: 1,
-      kegiatan: "Aktivitas Pendahuluan",
-      deskripsi: "Melakukan apersepsi dan menyampaikan tujuan pembelajaran serta memantik fokus peserta didik sebelum masuk ke materi inti.",
-      // image: foto1, // Ganti null dengan variabel foto Anda jika sudah di-import
-      warna: "#2563eb" // Biru
-    },
-    {
-      id: 2,
-      kegiatan: "Diskusi Kelompok (PBL)",
-      deskripsi: "Mendampingi peserta didik dalam memecahkan masalah pada Lembar Kerja Peserta Didik (LKPD) secara kolaboratif.",
-      // image: foto2,
-      warna: "#10b981" // Hijau
-    },
-    {
-      id: 3,
-      kegiatan: "Presentasi Hasil Karya",
-      deskripsi: "Fasilitasi perwakilan kelompok dalam mempresentasikan hasil diskusi dan analisis pemecahan masalah di depan kelas.",
-      // image: foto3,
-      warna: "#f59e0b" // Oranye/Kuning
-    },
-    {
-      id: 4,
-      kegiatan: "Bimbingan dengan Guru Pamong",
-      deskripsi: "Sesi diskusi dan refleksi bersama Guru Pamong setelah pelaksanaan siklus praktik mengajar selesai.",
-      // image: foto4,
-      warna: "#8b5cf6" // Ungu
-    }
-  ];
-
   return (
     <div className="content-card fade-in">
-      <h2 className="section-title">
-        <i className="fas fa-camera-retro"></i> Dokumentasi Kegiatan
-      </h2>
-      <p style={{ marginBottom: '2rem' }}>
-        Galeri berikut merupakan rekaman visual dari serangkaian aktivitas dan praktik mengajar nyata yang saya laksanakan selama kegiatan PPL Terbimbing di sekolah mitra.
-      </p>
-
-      {/* Grid Galeri Foto */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
-        
-        {galeri.map((item) => (
-          <div key={item.id} className="feature-box" style={{ padding: '1.2rem', borderTop: `4px solid ${item.warna}`, borderLeft: 'none' }}>
-            
-            {/* Area Foto */}
-            <div style={{ width: '100%', height: '220px', backgroundColor: '#f1f5f9', borderRadius: '8px', overflow: 'hidden', marginBottom: '1.2rem', border: '1px solid #e2e8f0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              {/* Jika image tersedia, tampilkan fotonya. Jika tidak, tampilkan ikon kamera pengganti */}
-              {item.image ? (
-                <img src={item.image} alt={item.kegiatan} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-              ) : (
-                <div style={{ textAlign: 'center', color: '#94a3b8' }}>
-                  <i className="fas fa-image" style={{ fontSize: '3rem', marginBottom: '10px' }}></i>
-                  <p style={{ fontSize: '0.85rem', margin: 0 }}>Foto {item.id} (Belum dimasukkan)</p>
-                </div>
-              )}
-            </div>
-
-            {/* Deskripsi Kegiatan */}
-            <h4 style={{ marginBottom: '0.5rem', color: '#1e293b', fontSize: '1.1rem' }}>
-              {item.kegiatan}
-            </h4>
-            <p style={{ fontSize: '0.9rem', color: '#64748b', lineHeight: '1.5', margin: 0 }}>
-              {item.deskripsi}
-            </p>
-          </div>
-        ))}
+      
+      {/* --- HEADER DOKUMENTASI --- */}
+      <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+        <h2 className="section-title" style={{ justifyContent: 'center', borderBottom: 'none', marginBottom: '0.5rem' }}>
+          <i className="fas fa-camera-retro"></i> Dokumentasi Kegiatan
+        </h2>
+        <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', maxWidth: '700px', margin: '0 auto' }}>
+          Galeri visual pelaksanaan tugas, observasi, dan pendampingan selama program Praktik Pengalaman Lapangan (PPL) di sekolah mitra.
+        </p>
       </div>
+
+      {/* --- BAGIAN 1: AKTIVITAS & PRAKTIK LAPANGAN --- */}
+      <h3 style={{ color: 'var(--text-main)', marginBottom: '1.5rem', borderBottom: '2px solid var(--border-color)', paddingBottom: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+        <i className="fas fa-tasks" style={{ color: 'var(--primary)' }}></i> Aktivitas Lapangan & Non-Mengajar
+      </h3>
+
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem', marginBottom: '4rem' }}>
+        <FotoCard
+          title="Penyerahan Mahasiswa"
+          desc="Dokumentasi resmi penyerahan mahasiswa PPL ke pihak sekolah mitra."
+        />
+        <FotoCard
+          title="Observasi Sekolah"
+          desc="Pengamatan langsung manajemen, sarana prasarana, dan lingkungan belajar."
+        />
+        <FotoCard
+          title="Piket Pagi"
+          desc="Menyambut kedatangan siswa, membiasakan 5S, dan memantau kedisiplinan."
+        />
+        <FotoCard
+          title="Pengondisian Pasca PKL"
+          desc="Kegiatan di luar aktivitas PPL untuk pendampingan siswa pasca Praktik Kerja Lapangan."
+        />
+        <FotoCard
+          title="Asistensi Mengajar"
+          desc="Mendampingi dan berkolaborasi bersama guru pamong dalam proses pembelajaran di kelas."
+        />
+      </div>
+
+      {/* --- BAGIAN 2: KEGIATAN BIMBINGAN --- */}
+      <h3 style={{ color: 'var(--text-main)', marginBottom: '1.5rem', borderBottom: '2px solid var(--border-color)', paddingBottom: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+        <i className="fas fa-users-cog" style={{ color: 'var(--primary)' }}></i> Kegiatan Bimbingan & Refleksi
+      </h3>
+
+      {/* Galeri Bimbingan Guru Pamong */}
+      <div style={{ marginBottom: '2.5rem', background: 'var(--bg-soft)', padding: '1.5rem', borderRadius: '16px', border: '1px solid var(--border-color)' }}>
+        <h4 style={{ color: 'var(--primary)', marginBottom: '0.5rem', marginTop: 0, display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <i className="fas fa-chalkboard-teacher"></i> Bimbingan Guru Pamong
+        </h4>
+        <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1.5rem' }}>
+          Diskusi, evaluasi perangkat ajar, dan pendampingan langsung terkait praktik pembelajaran di kelas.
+        </p>
+        
+        {/* Grid untuk 3 Foto - Akan menyesuaikan otomatis di Mobile */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
+          <FotoGaleri />
+          <FotoGaleri />
+          <FotoGaleri />
+        </div>
+      </div>
+
+      {/* Galeri Bimbingan Dosen Pembimbing Lapangan */}
+      <div style={{ background: 'var(--bg-soft)', padding: '1.5rem', borderRadius: '16px', border: '1px solid var(--border-color)' }}>
+        <h4 style={{ color: 'var(--primary)', marginBottom: '0.5rem', marginTop: 0, display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <i className="fas fa-user-graduate"></i> Bimbingan DPL
+        </h4>
+        <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1.5rem' }}>
+          Konsultasi akademik, pelaporan progres, dan refleksi keseluruhan pelaksanaan PPL bersama Dosen Pembimbing.
+        </p>
+        
+        {/* Grid untuk 4 Foto - Akan menyesuaikan otomatis di Mobile */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
+          <FotoGaleri />
+          <FotoGaleri />
+          <FotoGaleri />
+          <FotoGaleri />
+        </div>
+      </div>
+
     </div>
   );
 }
