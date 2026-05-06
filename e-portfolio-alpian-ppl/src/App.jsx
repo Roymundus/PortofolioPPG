@@ -8,11 +8,11 @@ import ObservasiSection from './components/ObservasiSection';
 
 function App() {
   const [activeTab, setActiveTab] = useState('profil');
-  
-  // State untuk Mode Gelap
   const [isDarkMode, setIsDarkMode] = useState(false);
+  
+  // State baru untuk mengontrol buka/tutup Sidebar di HP
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  // Efek untuk mengubah tema pada tag HTML utama
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.setAttribute('data-theme', 'dark');
@@ -23,39 +23,69 @@ function App() {
 
   const handleNavigation = (tabName) => {
     setActiveTab(tabName);
+    setIsSidebarOpen(false); // Tutup sidebar otomatis setelah menu dipilih (khusus HP)
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <>
-      <nav className="navbar">
+    <div className="layout">
+      
+      {/* HEADER MOBILE (Hanya Muncul di Layar HP) */}
+      <div className="mobile-header">
         <div className="nav-brand">
           <i className="fas fa-layer-group"></i> E-Portfolio
         </div>
+        <button className="btn-menu" onClick={() => setIsSidebarOpen(true)}>
+          <i className="fas fa-bars"></i>
+        </button>
+      </div>
+
+      {/* OVERLAY GELAP (Muncul di HP saat menu terbuka) */}
+      <div 
+        className={`overlay ${isSidebarOpen ? 'active' : ''}`} 
+        onClick={() => setIsSidebarOpen(false)}
+      ></div>
+
+      {/* SIDEBAR NAVIGATION */}
+      <aside className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
+        <div className="sidebar-header">
+          <div className="nav-brand">
+            <i className="fas fa-layer-group"></i> E-Portfolio
+          </div>
+          <button className="btn-close" onClick={() => setIsSidebarOpen(false)}>
+            &times;
+          </button>
+        </div>
+
         <ul className="nav-links">
           <li><a className={activeTab === 'profil' ? 'active' : ''} onClick={() => handleNavigation('profil')}><i className="fas fa-user-circle"></i> Profil</a></li>
-          <li><a className={activeTab === 'observasi' ? 'active' : ''} onClick={() => handleNavigation('observasi')}><i className="fas fa-school"></i> Observasi</a></li>
-          <li><a className={activeTab === 'artefak' ? 'active' : ''} onClick={() => handleNavigation('artefak')}><i className="fas fa-briefcase"></i> Artefak</a></li>
+          <li><a className={activeTab === 'observasi' ? 'active' : ''} onClick={() => handleNavigation('observasi')}><i className="fas fa-school"></i> Observasi Sekolah</a></li>
+          <li><a className={activeTab === 'artefak' ? 'active' : ''} onClick={() => handleNavigation('artefak')}><i className="fas fa-briefcase"></i> Analisis Artefak</a></li>
           <li><a className={activeTab === 'refleksi' ? 'active' : ''} onClick={() => handleNavigation('refleksi')}><i className="fas fa-lightbulb"></i> Model Guru</a></li>
           <li><a className={activeTab === 'dokumentasi' ? 'active' : ''} onClick={() => handleNavigation('dokumentasi')}><i className="fas fa-camera"></i> Dokumentasi</a></li>
-          
-          {/* Tombol Toggle Mode Gelap */}
-          <li>
-            <button className="btn-theme" onClick={() => setIsDarkMode(!isDarkMode)} title="Ganti Tema">
-              <i className={isDarkMode ? "fas fa-sun" : "fas fa-moon"} style={{ color: isDarkMode ? '#facc15' : 'inherit' }}></i>
-            </button>
-          </li>
         </ul>
-      </nav>
 
-      <main className="container">
-        {activeTab === 'profil' && <ProfilSection />}
-        {activeTab === 'observasi' && <ObservasiSection />}
-        {activeTab === 'artefak' && <ArtefakSection />}
-        {activeTab === 'refleksi' && <RefleksiSection />}
-        {activeTab === 'dokumentasi' && <DokumentasiSection />}
+        {/* Tombol Tema dipindah ke bawah Sidebar */}
+        <div className="theme-wrapper">
+          <button className="btn-theme" onClick={() => setIsDarkMode(!isDarkMode)}>
+            <i className={isDarkMode ? "fas fa-sun" : "fas fa-moon"} style={{ color: isDarkMode ? '#facc15' : 'inherit' }}></i>
+            {isDarkMode ? "Mode Terang" : "Mode Gelap"}
+          </button>
+        </div>
+      </aside>
+
+      {/* KONTEN UTAMA */}
+      <main className="main-content">
+        <div className="container">
+          {activeTab === 'profil' && <ProfilSection />}
+          {activeTab === 'observasi' && <ObservasiSection />}
+          {activeTab === 'artefak' && <ArtefakSection />}
+          {activeTab === 'refleksi' && <RefleksiSection />}
+          {activeTab === 'dokumentasi' && <DokumentasiSection />}
+        </div>
       </main>
-    </>
+
+    </div>
   );
 }
 
