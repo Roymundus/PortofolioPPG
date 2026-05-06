@@ -6,6 +6,7 @@ import ProfilSection from './components/ProfilSection';
 import ArtefakSection from './components/ArtefakSection';
 import RefleksiSection from './components/RefleksiSection';
 import DokumentasiSection from './components/DokumentasiSection'; 
+import ObservasiSection from './components/ObservasiSection';
 
 function App() {
   const [activeTab, setActiveTab] = useState('profil');
@@ -55,6 +56,11 @@ function App() {
               <i className="fas fa-camera-retro"></i> Dokumentasi
             </a>
           </li>
+          <li>
+            <a className={activeTab === 'observasi' ? 'active' : ''} onClick={() => handleNavigation('observasi')}>
+              <i className="fas fa-school"></i> Observasi Sekolah
+            </a>
+          </li>
         </ul>
       </nav>
 
@@ -64,6 +70,7 @@ function App() {
         {activeTab === 'artefak' && <ArtefakSection />}
         {activeTab === 'refleksi' && <RefleksiSection />}
         {activeTab === 'dokumentasi' && <DokumentasiSection />} {/* Menampilkan Komponen DokumentasiSection */}
+        {activeTab === 'observasi' && <ObservasiSection />} {/* Menampilkan Komponen ObservasiSection */}
       </main>
     </>
   );
