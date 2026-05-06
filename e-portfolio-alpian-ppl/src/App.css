@@ -136,15 +136,20 @@ body {
 /* --- KONTEN UTAMA --- */
 .main-content {
   margin-left: var(--sidebar-width);
-  padding: 40px 50px;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   animation: fadeIn 0.6s ease-out;
 }
 
 .container {
-  max-width: 900px;
+  flex: 1;
+  width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
+  padding: 40px 50px;
+  box-sizing: border-box;
 }
 
 @keyframes fadeIn {
@@ -242,6 +247,92 @@ body {
 
   .grid-2 { grid-template-columns: 1fr; }
   .hero { padding: 3rem 1.5rem; }
+}
+
+/* --- FOOTER --- */
+.footer {
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-color);
+  padding: 3rem 0 1.5rem;
+  margin-top: 5rem; /* Memberi jarak dari konten di atasnya */
+  color: var(--text-muted);
+}
+
+.footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.footer-col h4 {
+  color: var(--text-main);
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+  transform: translateX(5px);
+}
+
+.footer-map iframe {
+  width: 100%;
+  height: 160px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  font-size: 1.3rem;
+}
+
+.social-icons a {
+  color: var(--text-muted);
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--primary);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.9rem;
 }
 
 /* Sembunyikan tombol close di desktop */
