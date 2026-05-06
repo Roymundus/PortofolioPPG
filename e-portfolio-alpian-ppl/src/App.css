@@ -123,9 +123,57 @@ body {
 .btn-download:hover { background: var(--primary); color: white; transform: translateY(-3px); box-shadow: 0 10px 20px var(--shadow-color); }
 
 @media (max-width: 768px) {
-  .navbar { flex-direction: column; padding: 1rem; gap: 15px; }
-  .nav-links { flex-wrap: wrap; justify-content: center; }
-  .container { margin-top: 160px; }
-  .grid-2 { grid-template-columns: 1fr; }
-  .hero { padding: 3rem 1.5rem; }
+  .navbar { 
+    flex-direction: column; 
+    padding: 15px 0 5px 0; /* Kurangi padding vertikal */
+    gap: 12px; 
+  }
+  
+  .nav-brand {
+    padding: 0 20px; /* Pastikan judul tetap memiliki jarak di kiri-kanan */
+  }
+
+  .nav-links { 
+    flex-wrap: nowrap; /* Mencegah menu turun ke baris baru */
+    justify-content: flex-start; 
+    overflow-x: auto; /* Mengaktifkan scroll horizontal */
+    width: 100%;
+    padding: 0 20px 10px 20px;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch; /* Efek scroll mulus di perangkat iOS/Mobile */
+  }
+
+  /* Menyembunyikan visual scrollbar agar lebih bersih */
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+  .nav-links {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .nav-links li {
+    flex-shrink: 0; /* Memastikan setiap tombol tidak menyusut tertekan */
+  }
+
+  .nav-links a {
+    white-space: nowrap; /* Teks tidak akan terpotong ke bawah */
+    font-size: 0.9rem;
+  }
+
+  .btn-theme {
+    margin-left: 0; /* Reset margin tombol tema di mobile */
+  }
+
+  .container { 
+    margin-top: 120px; /* Tarik konten ke atas karena navbar sekarang lebih tipis */
+  }
+
+  .grid-2 { 
+    grid-template-columns: 1fr; 
+  }
+
+  .hero { 
+    padding: 3rem 1.5rem; 
+  }
 }
