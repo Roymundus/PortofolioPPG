@@ -1,221 +1,127 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
+/* --- VARIABEL TEMA TERANG (LIGHT) --- */
 :root {
-  --primary: #2563eb;    /* Royal Blue (Biru Utama) */
-  --secondary: #3b82f6;  /* Sky Blue (Biru Muda Aksen) */
-  --bg: #f0f9ff;         /* Latar belakang biru sangat muda (menyegarkan) */
-  --surface: #ffffff;    /* Card background */
-  --text: #1e293b;       /* Dark slate */
-  --text-muted: #64748b; /* Gray */
+  --bg-main: #f0f9ff;         /* Biru sangat pucat untuk background utama */
+  --bg-card: #ffffff;         /* Putih untuk kartu */
+  --bg-soft: #f8fafc;         /* Abu-abu kebiruan sangat muda */
+  --text-main: #1e293b;       /* Teks utama gelap */
+  --text-muted: #64748b;      /* Teks sekunder/paragraf */
+  --border-color: #e2e8f0;    /* Garis batas terang */
+  --primary: #2563eb;         /* Biru utama */
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  --shadow-color: rgba(37, 99, 235, 0.05);
 }
 
+/* --- VARIABEL TEMA GELAP (DARK) --- */
+[data-theme='dark'] {
+  --bg-main: #020617;         /* Hitam kebiruan sangat gelap */
+  --bg-card: #0f172a;         /* Slate gelap untuk kartu */
+  --bg-soft: #1e293b;         /* Slate sedikit lebih terang */
+  --text-main: #f8fafc;       /* Teks putih terang */
+  --text-muted: #94a3b8;      /* Teks abu-abu terang */
+  --border-color: #334155;    /* Garis batas gelap */
+  --primary: #3b82f6;         /* Biru utama mode gelap (lebih nyala) */
+  --nav-bg: rgba(2, 6, 23, 0.85);
+  --shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+/* --- STYLING DASAR --- */
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
+  background-color: var(--bg-main);
+  color: var(--text-main);
   margin: 0;
   padding: 0;
   line-height: 1.7;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* TOP NAVBAR DENGAN EFEK KACA (GLASSMORPHISM) */
+/* --- NAVBAR --- */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.85);
+  background: var(--nav-bg);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(37, 99, 235, 0.1);
+  border-bottom: 1px solid var(--border-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5%;
   z-index: 1000;
   box-sizing: border-box;
+  transition: background 0.3s ease, border 0.3s ease;
 }
 
-.nav-brand {
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: var(--primary);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
+.nav-brand { font-weight: 700; font-size: 1.2rem; color: var(--primary); display: flex; align-items: center; gap: 10px; }
+.nav-links { display: flex; gap: 1rem; list-style: none; margin: 0; padding: 0; align-items: center; }
 .nav-links a {
-  text-decoration: none;
-  color: var(--text-muted);
-  font-weight: 600;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 0.6rem 1.2rem;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  text-decoration: none; color: var(--text-muted); font-weight: 600; font-size: 0.95rem;
+  cursor: pointer; transition: all 0.3s ease; padding: 0.6rem 1.2rem; border-radius: 10px; display: flex; align-items: center; gap: 8px;
 }
+.nav-links a:hover { color: var(--primary); background: rgba(37, 99, 235, 0.05); }
+.nav-links a.active { color: var(--primary); background: rgba(37, 99, 235, 0.1); }
 
-.nav-links a:hover {
-  color: var(--primary);
-  background: rgba(37, 99, 235, 0.05); /* Biru transparan */
+/* Tombol Dark Mode */
+.btn-theme {
+  background: transparent; border: 1px solid var(--border-color); color: var(--text-muted);
+  font-size: 1.2rem; padding: 6px 12px; border-radius: 8px; cursor: pointer; transition: all 0.3s; margin-left: 10px;
 }
+.btn-theme:hover { background: var(--bg-soft); color: var(--primary); }
 
-.nav-links a.active {
-  color: var(--primary);
-  background: rgba(37, 99, 235, 0.1); /* Biru transparan lebih tegas */
-}
+/* --- KONTEN & KARTU --- */
+.container { max-width: 900px; margin: 120px auto 60px; padding: 0 20px; animation: fadeIn 0.6s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
-/* CONTAINER KONTEN DI TENGAH */
-.container {
-  max-width: 900px;
-  margin: 120px auto 60px;
-  padding: 0 20px;
-  animation: fadeIn 0.6s ease-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* HERO SECTION (BAGIAN ATAS PROFIL) */
 .hero {
-  text-align: center;
-  padding: 4rem 2rem;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  border-radius: 24px;
-  color: white;
-  margin-bottom: 3rem;
-  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.25); /* Bayangan Biru */
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::after {
-  content: '';
-  position: absolute;
-  top: -50%; right: -20%;
-  width: 300px; height: 300px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 50%;
-  filter: blur(50px);
+  text-align: center; padding: 4rem 2rem; border-radius: 24px; color: white; margin-bottom: 3rem;
+  box-shadow: 0 20px 40px var(--shadow-color); position: relative; overflow: hidden;
 }
 
 .hero-img {
-  width: 110px;
-  height: 110px;
-  background: white;
-  border-radius: 50%;
-  margin: 0 auto 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  color: var(--primary);
+  width: 110px; height: 110px; background: white; border-radius: 50%; margin: 0 auto 1.5rem;
+  display: flex; align-items: center; justify-content: center; font-size: 3rem; color: var(--primary);
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .hero h1 { margin: 0 0 0.5rem 0; font-size: 2.2rem; }
 .hero p { font-size: 1.1rem; opacity: 0.9; margin: 0; font-weight: 300; }
 
-/* KARTU KONTEN ELEGAN */
 .content-card {
-  background: var(--surface);
-  padding: 2.5rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.05); /* Bayangan biru sangat halus */
-  margin-bottom: 2rem;
-  border: 1px solid rgba(37, 99, 235, 0.05);
+  background: var(--bg-card); padding: 2.5rem; border-radius: 20px;
+  box-shadow: 0 10px 30px var(--shadow-color); margin-bottom: 2rem; border: 1px solid var(--border-color);
+  transition: background-color 0.3s, border 0.3s, box-shadow 0.3s;
 }
 
 .section-title {
-  font-size: 1.6rem;
-  color: var(--primary);
-  margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  border-bottom: 2px solid rgba(37, 99, 235, 0.1);
-  padding-bottom: 15px;
+  font-size: 1.6rem; color: var(--primary); margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 12px; border-bottom: 2px solid var(--border-color); padding-bottom: 15px;
 }
 
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }
 
 .feature-box {
-  background: var(--surface);
-  padding: 1.5rem;
-  border-radius: 16px;
-  border-left: 4px solid var(--secondary);
-  border: 1px solid rgba(0,0,0,0.03);
-  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--bg-card); padding: 1.5rem; border-radius: 16px;
+  border-left: 4px solid var(--primary); border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px var(--shadow-color); transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
 }
+.feature-box:hover { transform: translateY(-5px); box-shadow: 0 10px 20px var(--shadow-color); }
+.feature-box h4 { margin: 0 0 1rem 0; color: var(--text-main); display: flex; align-items: center; gap: 8px; }
 
-.feature-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.1);
-}
-
-.feature-box h4 {
-  margin: 0 0 1rem 0;
-  color: var(--text);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-/* ELEMEN TAMBAHAN */
 .quote-modern {
-  font-size: 1.2rem;
-  font-style: italic;
-  text-align: center;
-  color: var(--primary);
-  padding: 2.5rem 2rem;
-  background: rgba(37, 99, 235, 0.03);
-  border-left: 4px solid var(--primary);
-  border-radius: 0 16px 16px 0;
-  margin: 2rem 0;
+  font-size: 1.2rem; font-style: italic; text-align: center; color: var(--primary);
+  padding: 2.5rem 2rem; background: var(--bg-soft); border-left: 4px solid var(--primary);
+  border-radius: 0 16px 16px 0; margin: 2rem 0;
 }
 
 .btn-download {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--surface);
-  color: var(--primary);
-  padding: 12px 24px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-  margin-right: 15px;
-  margin-bottom: 15px;
-  border: 1px solid var(--primary);
+  display: inline-flex; align-items: center; gap: 8px; background: var(--bg-card); color: var(--primary);
+  padding: 12px 24px; border-radius: 12px; text-decoration: none; font-weight: 600;
+  transition: 0.3s; margin-right: 15px; margin-bottom: 15px; border: 1px solid var(--primary);
 }
+.btn-download:hover { background: var(--primary); color: white; transform: translateY(-3px); box-shadow: 0 10px 20px var(--shadow-color); }
 
-.btn-download:hover {
-  background: var(--primary);
-  color: white; 
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
-}
-
-/* RESPONSIF */
 @media (max-width: 768px) {
   .navbar { flex-direction: column; padding: 1rem; gap: 15px; }
   .nav-links { flex-wrap: wrap; justify-content: center; }
@@ -223,4 +129,3 @@ body {
   .grid-2 { grid-template-columns: 1fr; }
   .hero { padding: 3rem 1.5rem; }
 }
-

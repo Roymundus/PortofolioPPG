@@ -110,8 +110,8 @@ export default function ArtefakSection() {
             onClick={() => setActiveDoc(key)}
             style={{
               padding: '10px 20px',
-              background: activeDoc === key ? '#2563eb' : '#ffffff',
-              color: activeDoc === key ? 'white' : '#64748b',
+              background: activeDoc === key ? '#2563eb' : 'var(--bg-card)',
+              color: activeDoc === key ? 'white' : 'var(--text-muted)',
               border: `1px solid ${activeDoc === key ? '#2563eb' : '#cbd5e1'}`,
               borderRadius: '8px',
               cursor: 'pointer',
@@ -130,17 +130,17 @@ export default function ArtefakSection() {
       </div>
 
       {/* Area Tampil Dokumen (Iframe Viewer) */}
-      <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '16px', padding: '1.5rem', transition: 'all 0.3s' }}>
-        <h4 style={{ color: '#2563eb', margin: '0 0 5px 0', fontSize: '1.2rem' }}>
+      <div style={{ background: 'var(--bg-soft)', border: '1px solid var(--border-color)', borderRadius: '16px', padding: '1.5rem', transition: 'all 0.3s' }}>
+        <h4 style={{ color: 'var(--text-main)', margin: '0 0 5px 0', fontSize: '1.2rem' }}>
           <i className={`fas ${docData[activeDoc].icon}`} style={{ marginRight: '8px' }}></i> 
           {docData[activeDoc].title}
         </h4>
-        <p style={{ color: '#64748b', fontSize: '0.95rem', marginBottom: '1.5rem' }}>
+        <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '1.5rem' }}>
           {docData[activeDoc].desc}
         </p>
         
         {/* Penampil Dokumen PDF */}
-        <div style={{ width: '100%', height: '500px', borderRadius: '8px', overflow: 'hidden', border: '1px solid #cbd5e1', background: '#e2e8f0', position: 'relative' }}>
+        <div style={{ width: '100%', height: '500px', borderRadius: '8px', overflow: 'hidden', border: '1px solid #cbd5e1', background: 'var(--border-color)', position: 'relative' }}>
           <iframe 
             src={docData[activeDoc].embedUrl} 
             width="100%" 
@@ -155,12 +155,12 @@ export default function ArtefakSection() {
       {/* =========================================================
           BAGIAN 2: TAB NAVIGASI ANALISIS (TEMA TERANG / CLEAN)
           ========================================================= */}
-      <div style={{ marginTop: '4rem', padding: '2.5rem', background: '#ffffff', borderRadius: '24px', border: '1px solid #e2e8f0', boxShadow: '0 10px 30px rgba(37, 99, 235, 0.05)' }}>
+      <div style={{ marginTop: '4rem', padding: '2.5rem', background: 'var(--bg-card)', borderRadius: '24px', border: '1px solid var(--border-color)', boxShadow: '0 10px 30px rgba(37, 99, 235, 0.05)' }}>
         
         <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
           <h3 style={{ color: '#2563eb', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '2px', margin: '0 0 10px 0' }}>Refleksi Pembelajaran</h3>
-          <h2 style={{ color: '#1e293b', fontSize: '2rem', margin: '0 0 15px 0' }}>Analisis Artefak Produk</h2>
-          <p style={{ color: '#64748b', maxWidth: '600px', margin: '0 auto' }}>Refleksi mendalam terhadap proses penyusunan rencana dan perangkat pembelajaran selama program PPG Terbimbing.</p>
+          <h2 style={{ color: 'var(--text-main)', fontSize: '2rem', margin: '0 0 15px 0' }}>Analisis Artefak Produk</h2>
+          <p style={{ color: 'var(--text-muted)', maxWidth: '600px', margin: '0 auto' }}>Refleksi mendalam terhadap proses penyusunan rencana dan perangkat pembelajaran selama program PPG Terbimbing.</p>
         </div>
 
         {/* Tombol Tab Analisis (Tema Terang) */}
@@ -171,8 +171,8 @@ export default function ArtefakSection() {
               onClick={() => setActiveAnalysis(key)}
               style={{
                 padding: '10px 20px',
-                background: activeAnalysis === key ? '#2563eb' : '#ffffff',
-                color: activeAnalysis === key ? 'white' : '#64748b',
+                background: activeAnalysis === key ? '#2563eb' : 'var(--bg-card)',
+                color: activeAnalysis === key ? 'white' : 'var(--text-muted)',
                 border: `1px solid ${activeAnalysis === key ? '#2563eb' : '#cbd5e1'}`,
                 borderRadius: '8px',
                 cursor: 'pointer',
@@ -191,21 +191,21 @@ export default function ArtefakSection() {
         </div>
 
         {/* Konten Tab Analisis (Background Biru Sangat Pucat / Soft Gray) */}
-        <div style={{ background: '#f8fafc', padding: '2.5rem', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
-          <h3 style={{ color: '#1e293b', fontSize: '1.5rem', margin: '0 0 8px 0' }}>{analysisData[activeAnalysis].title}</h3>
-          <p style={{ color: '#64748b', margin: '0 0 2rem 0' }}>{analysisData[activeAnalysis].desc}</p>
+        <div style={{ background: 'var(--bg-soft)', padding: '2.5rem', borderRadius: '16px', border: '1px solid var(--border-color)' }}>
+          <h3 style={{ color: 'var(--text-main)', fontSize: '1.5rem', margin: '0 0 8px 0' }}>{analysisData[activeAnalysis].title}</h3>
+          <p style={{ color: 'var(--text-muted)', margin: '0 0 2rem 0' }}>{analysisData[activeAnalysis].desc}</p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
             {analysisData[activeAnalysis].cards.map((card) => (
-              <div key={card.id} style={{ background: '#ffffff', padding: '1.5rem', borderRadius: '12px', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px rgba(0,0,0,0.02)', transition: 'transform 0.3s', cursor: 'default' }}>
+              <div key={card.id} style={{ background: 'var(--bg-card)', padding: '1.5rem', borderRadius: '12px', border: '1px solid var(--border-color)', boxShadow: '0 4px 6px rgba(0,0,0,0.02)', transition: 'transform 0.3s', cursor: 'default' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '15px' }}>
                   {/* Lingkaran nomor dengan warna biru */}
                   <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'rgba(37, 99, 235, 0.1)', color: '#2563eb', display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: 'bold', fontSize: '0.9rem' }}>
                     {card.id}
                   </div>
-                  <h4 style={{ color: '#1e293b', margin: 0, fontSize: '1.05rem' }}>{card.title}</h4>
+                  <h4 style={{ color: 'var(--text-main)', margin: 0, fontSize: '1.05rem' }}>{card.title}</h4>
                 </div>
-                <p style={{ color: '#64748b', fontSize: '0.9rem', lineHeight: '1.6', margin: 0 }}>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: '1.6', margin: 0 }}>
                   {card.text}
                 </p>
               </div>
@@ -226,17 +226,17 @@ export default function ArtefakSection() {
       </p>
       
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem', marginTop: '1.5rem' }}>
-        <div style={{ height: '300px', borderRadius: '8px', overflow: 'hidden', border: '1px solid #e2e8f0' }}>
+        <div style={{ height: '300px', borderRadius: '8px', overflow: 'hidden', border: '1px solid var(--border-color)' }}>
           <iframe src="https://drive.google.com/file/d/GANTI_DENGAN_ID_FILE_ANDA/preview" width="100%" height="100%" style={{ border: 'none' }} title="Lampiran 7"></iframe>
-          <div style={{ textAlign: 'center', padding: '10px', background: '#f8fafc', fontSize: '0.85rem', fontWeight: 'bold', borderTop: '1px solid #e2e8f0' }}>Lampiran 7 (Perangkat)</div>
+          <div style={{ textAlign: 'center', padding: '10px', background: 'var(--bg-soft)', fontSize: '0.85rem', fontWeight: 'bold', borderTop: '1px solid var(--border-color)' }}>Lampiran 7 (Perangkat)</div>
         </div>
-        <div style={{ height: '300px', borderRadius: '8px', overflow: 'hidden', border: '1px solid #e2e8f0' }}>
+        <div style={{ height: '300px', borderRadius: '8px', overflow: 'hidden', border: '1px solid var(--border-color)' }}>
           <iframe src="https://drive.google.com/file/d/GANTI_DENGAN_ID_FILE_ANDA/preview" width="100%" height="100%" style={{ border: 'none' }} title="Lampiran 8 Siklus 1"></iframe>
-          <div style={{ textAlign: 'center', padding: '10px', background: '#f8fafc', fontSize: '0.85rem', fontWeight: 'bold', borderTop: '1px solid #e2e8f0' }}>Lampiran 8 (Siklus 1)</div>
+          <div style={{ textAlign: 'center', padding: '10px', background: 'var(--bg-soft)', fontSize: '0.85rem', fontWeight: 'bold', borderTop: '1px solid var(--border-color)' }}>Lampiran 8 (Siklus 1)</div>
         </div>
-        <div style={{ height: '300px', borderRadius: '8px', overflow: 'hidden', border: '1px solid #e2e8f0' }}>
+        <div style={{ height: '300px', borderRadius: '8px', overflow: 'hidden', border: '1px solid var(--border-color)' }}>
           <iframe src="https://drive.google.com/file/d/GANTI_DENGAN_ID_FILE_ANDA/preview" width="100%" height="100%" style={{ border: 'none' }} title="Lampiran 8 Siklus 2 & 3"></iframe>
-          <div style={{ textAlign: 'center', padding: '10px', background: '#f8fafc', fontSize: '0.85rem', fontWeight: 'bold', borderTop: '1px solid #e2e8f0' }}>Lampiran 8 (Siklus 2 & 3)</div>
+          <div style={{ textAlign: 'center', padding: '10px', background: 'var(--bg-soft)', fontSize: '0.85rem', fontWeight: 'bold', borderTop: '1px solid var(--border-color)' }}>Lampiran 8 (Siklus 2 & 3)</div>
         </div>
       </div>
 
