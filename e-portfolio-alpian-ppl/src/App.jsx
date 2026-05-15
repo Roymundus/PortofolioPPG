@@ -6,6 +6,8 @@ import RefleksiSection from './components/RefleksiSection';
 import DokumentasiSection from './components/DokumentasiSection';
 import ObservasiSection from './components/ObservasiSection';
 
+import logoUNY from './assets/Logo-UNY-Corel-terbaru.png';
+
 function App() {
   const [activeTab, setActiveTab] = useState('profil');
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -33,7 +35,8 @@ function App() {
       {/* HEADER MOBILE (Hanya Muncul di Layar HP) */}
       <div className="mobile-header">
         <div className="nav-brand">
-          <i className="fas fa-layer-group"></i> E-Portfolio
+          <img src={logoUNY} alt="Logo UNY" className="logo" />
+          E-Portofolio | Alpian Roymundus Siringo-ringo
         </div>
         <button className="btn-menu" onClick={() => setIsSidebarOpen(true)}>
           <i className="fas fa-bars"></i>
@@ -50,7 +53,8 @@ function App() {
       <aside className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
         <div className="sidebar-header">
           <div className="nav-brand">
-            <i className="fas fa-layer-group"></i> E-Portfolio
+            <img src={logoUNY} alt="Logo UNY" className="logo" />
+            E-Portofolio
           </div>
           <button className="btn-close" onClick={() => setIsSidebarOpen(false)}>
             &times;
@@ -89,7 +93,7 @@ function App() {
               
               {/* Kolom 1: Tentang */}
               <div className="footer-col">
-                <h4><i className="fas fa-layer-group"></i> E-Portfolio</h4>
+                <h4><i   className="fas fa-layer-group"></i> E-Portofolio</h4>
                 <p style={{ fontSize: '0.9rem', lineHeight: '1.6' }}>
                   Portofolio digital ini disusun sebagai bentuk dokumentasi dan refleksi selama mengikuti program Pendidikan Profesi Guru (PPG) Prajabatan di Universitas Negeri Yogyakarta.
                 </p>

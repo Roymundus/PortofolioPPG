@@ -67,7 +67,21 @@ body {
   color: var(--primary);
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+}
+
+/* Tambahkan ini untuk mengatur ukuran logo UNY */
+.nav-brand img {
+  height: 35px; /* Sesuaikan tinggi logo */
+  width: auto;
+  object-fit: contain;
+}
+
+/* Khusus mobile jika ingin ukuran berbeda */
+@media (max-width: 768px) {
+  .nav-brand img {
+    height: 30px;
+  }
 }
 
 .nav-links {
@@ -375,7 +389,8 @@ body {
   
   .footer-grid {
     grid-template-columns: 1fr; /* Kembali menjadi 1 baris ke bawah KHUSUS di HP */
-    gap: 2rem;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 }
 
