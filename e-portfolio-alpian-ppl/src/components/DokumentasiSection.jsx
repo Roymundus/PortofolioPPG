@@ -140,24 +140,18 @@ export default function DokumentasiSection() {
         { type: 'image', src: penyerahan2, caption: "Foto bersama pihak sekolah dan dosen pembimbing." }
       ]
     },
-    piket: {
-      title: "Piket Pagi",
-      desc: "Aktivitas menyambut siswa di gerbang sekolah dan membiasakan budaya 5S.",
+    kegiatanSekolah: {
+      title: "Kegiatan Sekolah",
+      desc: "Berbagai aktivitas rutin di SMK N 2 Yogyakarta, mulai dari apel pagi hingga pengondisian pasca PKL.",
       media: [
-        { type: 'image', src: apelPagi, caption: "Menyambut kedatangan siswa di gerbang utama SMK N 2 Yogyakarta." }
-      ]
-    },
-    pengondisian: {
-      title: "Pengondisian Pasca PKL",
-      desc: "Pendampingan dan pengarahan bagi siswa yang baru saja menyelesaikan Praktik Kerja Lapangan (PKL).",
-      media: [
+        { type: 'image', src: apelPagi, caption: "Menyambut kedatangan siswa di gerbang utama SMK N 2 Yogyakarta." },
         { type: 'image', src: pengondisian1, caption: "Menyambut kedatangan siswa di gerbang utama SMK N 2 Yogyakarta." },
         { type: 'image', src: pengondisian2, caption: "Menyambut kedatangan siswa di gerbang utama SMK N 2 Yogyakarta." },
         { type: 'image', src: pengondisian3, caption: "Menyambut kedatangan siswa di gerbang utama SMK N 2 Yogyakarta." },
         { type: 'image', src: pengondisian4, caption: "Menyambut kedatangan siswa di gerbang utama SMK N 2 Yogyakarta." },
         { type: 'image', src: pengondisian5, caption: "Menyambut kedatangan siswa di gerbang utama SMK N 2 Yogyakarta." },
         { type: 'image', src: pengondisian6, caption: "Menyambut kedatangan siswa di gerbang utama SMK N 2 Yogyakarta." }
-      ] 
+      ]
     },
     observasi: {
       title: "Praktek Mengajar",

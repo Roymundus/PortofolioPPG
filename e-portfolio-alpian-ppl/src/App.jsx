@@ -113,6 +113,7 @@ function App() {
                   <li><a onClick={() => handleNavigation('observasi')}><i className="fas fa-angle-right"></i> Observasi Sekolah</a></li>
                   <li><a onClick={() => handleNavigation('artefak')}><i className="fas fa-angle-right"></i> Analisis Artefak</a></li>
                   <li><a onClick={() => handleNavigation('refleksi')}><i className="fas fa-angle-right"></i> Model Guru</a></li>
+                  <li><a onClick={() => handleNavigation('dokumentasi')}><i className="fas fa-angle-right"></i> Dokumentasi</a></li>
                 </ul>
               </div>
 
