@@ -30,6 +30,9 @@ import asistensi6 from '../assets/Dokumentasi/Asisten Mengajar/asistensi-mengaja
 import praktekMengajar1 from '../assets/Dokumentasi/PPL Terbimbing/praktek-mengajar.jpg';
 import praktekMengajar2 from '../assets/Dokumentasi/PPL Terbimbing/praktek-mengajar2.jpg';
 import praktekMengajar3 from '../assets/Dokumentasi/PPL Terbimbing/praktek-mengajar3.jpg';
+import praktekMengajar4 from '../assets/Dokumentasi/PPL Terbimbing/praktek-mengajar-1.jpg';
+import praktekMengajar5 from '../assets/Dokumentasi/PPL Terbimbing/praktek-mengajar-2.jpg';
+import praktekMengajar6 from '../assets/Dokumentasi/PPL Terbimbing/praktek-mengajar-3.jpg';
 
 import pamitan1 from '../assets/Dokumentasi/Penyerahan Mahasiswa/pamitanpplt.jpg';
 import pamitan2 from '../assets/Dokumentasi/Penyerahan Mahasiswa/pamitanpplt2.jpg';
@@ -175,6 +178,9 @@ export default function DokumentasiSection() {
         {type:'image', src: praktekMengajar1, caption: "Pelaksanaan pembelajaran di kelas dengan bimbingan Guru Pamong." },
         {type:'image', src: praktekMengajar2, caption: "Pelaksanaan pembelajaran di kelas dengan bimbingan Guru Pamong." },
         {type:'image', src: praktekMengajar3, caption: "Pelaksanaan pembelajaran di kelas dengan bimbingan Guru Pamong." },
+        {type:'image', src: praktekMengajar4, caption: "Pelaksanaan pembelajaran di kelas dengan bimbingan Guru Pamong." },
+        {type:'image', src: praktekMengajar5, caption: "Pelaksanaan pembelajaran di kelas dengan bimbingan Guru Pamong." },
+        {type:'image', src: praktekMengajar6, caption: "Pelaksanaan pembelajaran di kelas dengan bimbingan Guru Pamong." }
       ]
     },
     pamong: {
