@@ -10,7 +10,8 @@
   --border-color: #e2e8f0;
   --primary: #2563eb;
   --shadow-color: rgba(37, 99, 235, 0.05);
-  --sidebar-width: 260px; /* Lebar Sidebar */
+  --sidebar-width: 260px;
+  /* Lebar Sidebar */
 }
 
 /* --- VARIABEL TEMA GELAP (DARK) --- */
@@ -72,7 +73,8 @@ body {
 
 /* Tambahkan ini untuk mengatur ukuran logo UNY */
 .nav-brand img {
-  height: 35px; /* Sesuaikan tinggi logo */
+  height: 35px;
+  /* Sesuaikan tinggi logo */
   width: auto;
   object-fit: contain;
 }
@@ -120,7 +122,8 @@ body {
 }
 
 .theme-wrapper {
-  margin-top: auto; /* Mendorong tombol tema ke bagian paling bawah sidebar */
+  margin-top: auto;
+  /* Mendorong tombol tema ke bagian paling bawah sidebar */
   padding-top: 20px;
   border-top: 1px solid var(--border-color);
 }
@@ -167,32 +170,158 @@ body {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Komponen Konten (Hero, Card, dll - Sama seperti sebelumnya) */
-.hero { text-align: center; padding: 4rem 2rem; border-radius: 24px; color: white; margin-bottom: 3rem; box-shadow: 0 20px 40px var(--shadow-color); position: relative; overflow: hidden; }
-.hero-img { width: 110px; height: 110px; background: white; border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: var(--primary); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
-.hero h1 { margin: 0 0 0.5rem 0; font-size: 2.2rem; }
-.hero p { font-size: 1.1rem; opacity: 0.9; margin: 0; font-weight: 300; }
-.content-card { background: var(--bg-card); padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 30px var(--shadow-color); margin-bottom: 2rem; border: 1px solid var(--border-color); transition: background-color 0.3s, border 0.3s, box-shadow 0.3s; }
-.section-title { font-size: 1.6rem; color: var(--primary); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 12px; border-bottom: 2px solid var(--border-color); padding-bottom: 15px; }
-.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }
-.feature-box { background: var(--bg-card); padding: 1.5rem; border-radius: 16px; border-left: 4px solid var(--primary); border: 1px solid var(--border-color); box-shadow: 0 4px 6px var(--shadow-color); transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s; }
-.feature-box:hover { transform: translateY(-5px); box-shadow: 0 10px 20px var(--shadow-color); }
-.feature-box h4 { margin: 0 0 1rem 0; color: var(--text-main); display: flex; align-items: center; gap: 8px; }
-.quote-modern { font-size: 1.2rem; font-style: italic; text-align: center; color: var(--primary); padding: 2.5rem 2rem; background: var(--bg-soft); border-left: 4px solid var(--primary); border-radius: 0 16px 16px 0; margin: 2rem 0; }
-.btn-download { display: inline-flex; align-items: center; gap: 8px; background: var(--bg-card); color: var(--primary); padding: 12px 24px; border-radius: 12px; text-decoration: none; font-weight: 600; transition: 0.3s; margin-right: 15px; margin-bottom: 15px; border: 1px solid var(--primary); }
-.btn-download:hover { background: var(--primary); color: white; transform: translateY(-3px); box-shadow: 0 10px 20px var(--shadow-color); }
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  border-radius: 24px;
+  color: white;
+  margin-bottom: 3rem;
+  box-shadow: 0 20px 40px var(--shadow-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 110px;
+  height: 110px;
+  background: white;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: var(--primary);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hero h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.2rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin: 0;
+  font-weight: 300;
+}
+
+.content-card {
+  background: var(--bg-card);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px var(--shadow-color);
+  margin-bottom: 2rem;
+  border: 1px solid var(--border-color);
+  transition: background-color 0.3s, border 0.3s, box-shadow 0.3s;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 15px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.feature-box {
+  background: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: 16px;
+  border-left: 4px solid var(--primary);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px var(--shadow-color);
+}
+
+.feature-box h4 {
+  margin: 0 0 1rem 0;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quote-modern {
+  font-size: 1.2rem;
+  font-style: italic;
+  text-align: center;
+  color: var(--primary);
+  padding: 2.5rem 2rem;
+  background: var(--bg-soft);
+  border-left: 4px solid var(--primary);
+  border-radius: 0 16px 16px 0;
+  margin: 2rem 0;
+}
+
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-card);
+  color: var(--primary);
+  padding: 12px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  border: 1px solid var(--primary);
+}
+
+.btn-download:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px var(--shadow-color);
+}
 
 /* --- RESPONSIVE MOBILE (HAMBURGER MENU) --- */
-.mobile-header { display: none; }
-.overlay { display: none; }
+.mobile-header {
+  display: none;
+}
+
+.overlay {
+  display: none;
+}
 
 /* --- RESPONSIVE MOBILE (HAMBURGER MENU & LAYOUT) --- */
-.mobile-header { display: none; }
-.overlay { display: none; }
+.mobile-header {
+  display: none;
+}
+
+.overlay {
+  display: none;
+}
 
 /* ========================================= */
 /* --- FOOTER STYLES (DESKTOP / UMUM) --- */
@@ -205,7 +334,7 @@ body {
   color: var(--text-muted);
   width: 100%;
   box-sizing: border-box;
-  margin-top: auto; 
+  margin-top: auto;
 }
 
 .footer-container {
@@ -215,7 +344,8 @@ body {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1.5fr; /* Ini yang membaginya jadi 3 kolom di Laptop */
+  grid-template-columns: 1.2fr 1fr 1.5fr;
+  /* Ini yang membaginya jadi 3 kolom di Laptop */
   gap: 3rem;
   margin-bottom: 3rem;
 }
@@ -231,12 +361,15 @@ body {
 }
 
 .footer-links {
-  list-style: none !important; /* Menghilangkan titik hitam (bullet) */
+  list-style: none !important;
+  /* Menghilangkan titik hitam (bullet) */
   padding: 0 !important;
   margin: 0;
 }
 
-.footer-links li { margin-bottom: 15px; }
+.footer-links li {
+  margin-bottom: 15px;
+}
 
 .footer-links a {
   color: var(--text-muted);
@@ -264,7 +397,8 @@ body {
 .social-icons {
   margin-top: 20px;
   display: flex;
-  gap: 15px; /* Memberi jarak agar ikon tidak menempel */
+  gap: 15px;
+  /* Memberi jarak agar ikon tidak menempel */
 }
 
 .social-icons a {
@@ -296,6 +430,7 @@ body {
 }
 
 @media (max-width: 768px) {
+
   /* 1. Header Mobile */
   .mobile-header {
     display: flex;
@@ -312,55 +447,94 @@ body {
     box-sizing: border-box;
   }
 
-  .btn-menu { background: transparent; border: none; font-size: 1.5rem; color: var(--text-main); cursor: pointer; }
-  .btn-close { display: block; background: transparent; border: none; font-size: 1.8rem; color: var(--text-muted); cursor: pointer; }
+  .btn-menu {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-main);
+    cursor: pointer;
+  }
+
+  .btn-close {
+    display: block;
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--text-muted);
+    cursor: pointer;
+  }
 
   /* 2. Sidebar & Overlay */
-  .sidebar { transform: translateX(-100%); width: 280px; }
-  .sidebar.open { transform: translateX(0); }
-  
-  .overlay {
-    display: block; position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
-    background: rgba(0, 0, 0, 0.5); z-index: 899; opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+  .sidebar {
+    transform: translateX(-100%);
+    width: 280px;
   }
-  .overlay.active { opacity: 1; pointer-events: auto; }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 899;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
 
   /* 3. KONTEN UTAMA (Diperlebar agar tidak tergencet) */
   .main-content {
     margin-left: 0;
-    padding: 90px 15px 20px 15px; /* Padding kiri-kanan dikurangi menjadi 15px */
+    padding: 90px 15px 20px 15px;
+    /* Padding kiri-kanan dikurangi menjadi 15px */
   }
 
   .container {
-    padding: 0; /* Reset padding container agar maksimal */
+    padding: 0;
+    /* Reset padding container agar maksimal */
   }
 
   /* 4. Hero Section (Kartu Biru Profil) */
   .hero {
-    padding: 2rem 1.2rem; /* Ruang dalam dikurangi */
+    padding: 2rem 1.2rem;
+    /* Ruang dalam dikurangi */
     border-radius: 16px;
   }
-  
+
   .hero h1 {
-    font-size: 1.5rem; /* Font nama dikecilkan agar tidak patah 3 baris */
+    font-size: 1.5rem;
+    /* Font nama dikecilkan agar tidak patah 3 baris */
     line-height: 1.3;
     margin-bottom: 0.8rem;
   }
-  
+
   .hero p {
     font-size: 0.9rem;
   }
 
   /* 5. Kartu Konten Umum (Observasi, Artefak, dll) */
   .content-card {
-    padding: 1.5rem 1rem; /* Ruang dalam kartu diperluas untuk teks */
+    padding: 1.5rem 1rem;
+    /* Ruang dalam kartu diperluas untuk teks */
     border-radius: 16px;
   }
 
   /* 6. Judul & Teks agar rapi */
   .section-title {
     font-size: 1.3rem;
-    flex-direction: column; /* Ikon dan teks ditumpuk ke bawah agar seimbang */
+    flex-direction: column;
+    /* Ikon dan teks ditumpuk ke bawah agar seimbang */
     text-align: center;
     gap: 8px;
     padding-bottom: 10px;
@@ -368,27 +542,28 @@ body {
 
   /* Menimpa inline-style padding besar pada kotak-kotak di dalam halaman Observasi */
   div[style*="padding: 2rem"] {
-    padding: 1.2rem 1rem !important; 
+    padding: 1.2rem 1rem !important;
   }
-  
+
   h3[style*="display: flex"] {
     flex-direction: column !important;
     text-align: center;
     gap: 8px !important;
   }
 
-  .grid-2 { 
-    grid-template-columns: 1fr; 
-    gap: 1.2rem; 
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
   }
 
   /* 7. Footer Mobile */
   .footer {
     padding: 2.5rem 15px 1.5rem;
   }
-  
+
   .footer-grid {
-    grid-template-columns: 1fr; /* Kembali menjadi 1 baris ke bawah KHUSUS di HP */
+    grid-template-columns: 1fr;
+    /* Kembali menjadi 1 baris ke bawah KHUSUS di HP */
     gap: 1.5rem;
     margin-bottom: 1.5rem;
   }
@@ -396,5 +571,7 @@ body {
 
 /* Sembunyikan tombol close sidebar di desktop */
 @media (min-width: 769px) {
-  .btn-close { display: none; }
+  .btn-close {
+    display: none;
+  }
 }
