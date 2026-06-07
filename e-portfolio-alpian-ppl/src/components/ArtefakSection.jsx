@@ -12,12 +12,6 @@ export default function ArtefakSection() {
 
   // Data Konten Dokumen Pembelajaran
   const docData = {
-    asesmen: {
-      title: 'Asesmen Diagnostik',
-      desc: 'Instrumen awal pemetaan kemampuan kognitif dan gaya belajar siswa sebelum materi dirancang.',
-      icon: 'fa-clipboard-check',
-      embedUrl: 'https://drive.google.com/file/d/1BLVxE0hpquFV9FN-6jbAE2g7MuRVn7Zs/preview'
-    },
     rpp: {
       title: 'Modul Ajar / RPP',
       desc: 'Rencana pelaksanaan pembelajaran komprehensif berbasis Problem-Based Learning (PBL).',
@@ -29,6 +23,12 @@ export default function ArtefakSection() {
       desc: 'Bahan tayang dan peraga visual interaktif untuk menjembatani konsep materi yang abstrak.',
       icon: 'fa-photo-video',
       embedUrl: 'https://www.canva.com/design/DAHGCSXbIos/1QVeStzd9kDGedUt6kz6rw/view?embed' 
+    },
+    asesmen: {
+      title: 'Asesmen Diagnostik',
+      desc: 'Instrumen awal pemetaan kemampuan kognitif dan gaya belajar siswa sebelum materi dirancang.',
+      icon: 'fa-clipboard-check',
+      embedUrl: 'https://drive.google.com/file/d/1BLVxE0hpquFV9FN-6jbAE2g7MuRVn7Zs/preview'
     },
     lkm: {
       title: 'LKM - Lembar Kerja Murid',

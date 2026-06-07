@@ -129,15 +129,15 @@ export default function DokumentasiSection() {
   // --- DATA DOKUMENTASI ---
   const dokumentasiData = {
     penyerahan: {
-      title: "Penyerahan Mahasiswa",
+      title: "Penyerahan dan Pamitan Mahasiswa",
       desc: "Momen serah terima mahasiswa PPL Terbimbing dari LPTK UNY ke pihak sekolah mitra SMK N 2 Yogyakarta.",
       media: [
-        { type: 'image', src: pamitan1, caption: "Sesi diskusi dan penyerahan secara resmi di sekolah." },
-        { type: 'image', src: pamitan2, caption: "Foto bersama pihak sekolah dan dosen pembimbing." },
-        { type: 'image', src: pamitan3, caption: "Foto bersama pihak sekolah dan dosen pembimbing." },
-        { type: 'image', src: pamitan4, caption: "Foto bersama pihak sekolah dan dosen pembimbing." },
-        { type: 'image', src: penyerahan1, caption: "Foto bersama pihak sekolah dan dosen pembimbing." },
-        { type: 'image', src: penyerahan2, caption: "Foto bersama pihak sekolah dan dosen pembimbing." }
+        { type: 'image', src: penyerahan1, caption: "Penyerahan Simbolis Mahasiswa PPL Terbimbing PPG Calon Guru UNY ke Pihak Sekolah SMK Negeri 2 Yogykarta diwakili oleh Wakil Kepala Kurikulum - Senin, 2 Maret 2026" },
+        { type: 'image', src: penyerahan2, caption: "Foto bersama pihak sekolah dan dosen pembimbing."},
+        { type: 'image', src: pamitan1, caption: "Foto Bersama Wakil Kepala Kurikulum dan Guru Pamong saat pamitan dari sekolah setelah melaksanakan PPL Terbimbing 1 - Kamis, 28 Februari 2026" },
+        { type: 'image', src: pamitan2, caption: "Foto Bersama Wakil Kepala Kurikulum dan Guru Pamong saat pamitan dari sekolah setelah melaksanakan PPL Terbimbing 1 - Kamis, 28 Februari 2026" },
+        { type: 'image', src: pamitan3, caption: "Foto Bersama Guru Pamong Informatika Pak Juwari, S.T. saat pamitan dari sekolah setelah melaksanakan PPL Terbimbing 1 - Kamis, 28 Februari 2026" },
+        { type: 'image', src: pamitan4, caption: "Foto Bersama Guru Pamong Informatika Pak Juwari, S.T. saat pamitan dari sekolah setelah melaksanakan PPL Terbimbing 1 - Kamis, 28 Februari 2026" },
       ]
     },
     kegiatanSekolah: {
@@ -145,56 +145,57 @@ export default function DokumentasiSection() {
       desc: "Berbagai aktivitas rutin di SMK N 2 Yogyakarta, mulai dari apel pagi hingga pengondisian pasca PKL.",
       media: [
         { type: 'image', src: apelPagi, caption: "Menyambut kedatangan siswa di gerbang utama SMK N 2 Yogyakarta." },
-        { type: 'image', src: pengondisian1, caption: "Menyambut kedatangan siswa di gerbang utama SMK N 2 Yogyakarta." },
-        { type: 'image', src: pengondisian2, caption: "Menyambut kedatangan siswa di gerbang utama SMK N 2 Yogyakarta." },
-        { type: 'image', src: pengondisian3, caption: "Menyambut kedatangan siswa di gerbang utama SMK N 2 Yogyakarta." },
-        { type: 'image', src: pengondisian4, caption: "Menyambut kedatangan siswa di gerbang utama SMK N 2 Yogyakarta." },
-        { type: 'image', src: pengondisian5, caption: "Menyambut kedatangan siswa di gerbang utama SMK N 2 Yogyakarta." },
-        { type: 'image', src: pengondisian6, caption: "Menyambut kedatangan siswa di gerbang utama SMK N 2 Yogyakarta." }
-      ]
-    },
-    observasi: {
-      title: "Praktek Mengajar",
-      desc: "Kegiatan pengamatan lingkungan fisik, sarana prasarana, dan budaya organisasi di sekolah.",
-      media: [
-        { type: 'image', src: praktekMengajar1, caption: "Menyambut kedatangan siswa di gerbang utama SMK N 2 Yogyakarta." },
-        { type: 'image', src: praktekMengajar2, caption: "Menyambut kedatangan siswa di gerbang utama SMK N 2 Yogyakarta." },
-        { type: 'image', src: praktekMengajar3, caption: "Menyambut kedatangan siswa di gerbang utama SMK N 2 Yogyakarta." },
-        { type: 'image', src: praktekMengajar4, caption: "Menyambut kedatangan siswa di gerbang utama SMK N 2 Yogyakarta." },
-        { type: 'image', src: praktekMengajar5, caption: "Menyambut kedatangan siswa di gerbang utama SMK N 2 Yogyakarta." },
-        { type: 'image', src: praktekMengajar6, caption: "Menyambut kedatangan siswa di gerbang utama SMK N 2 Yogyakarta." }
+        { type: 'image', src: pengondisian1, caption: "Kegiatan pengondisian siswapasca PKL di SMK N 2 Yogyakarta." },
+        { type: 'image', src: pengondisian2, caption: "Kegiatan pengondisian siswapasca PKL di SMK N 2 Yogyakarta." },
+        { type: 'image', src: pengondisian3, caption: "Kegiatan pengondisian siswapasca PKL di SMK N 2 Yogyakarta." },
+        { type: 'image', src: pengondisian4, caption: "Kegiatan pengondisian siswapasca PKL di SMK N 2 Yogyakarta." },
+        { type: 'image', src: pengondisian5, caption: "Kegiatan pengondisian siswapasca PKL di SMK N 2 Yogyakarta." },
+        { type: 'image', src: pengondisian6, caption: "Kegiatan pengondisian siswapasca PKL di SMK N 2 Yogyakarta." }
       ]
     },
     asistensi: {
       title: "Asistensi Mengajar",
       desc: "Kolaborasi bersama Guru Pamong dalam mendampingi proses pembelajaran di dalam kelas.",
       media: [
-        { type: 'image', src: asistensi1, caption: "Sesi diskusi dan penyerahan secara resmi di sekolah." },
-        { type: 'image', src: asistensi2, caption: "Foto bersama pihak sekolah dan dosen pembimbing." },
-        { type: 'image', src: asistensi3, caption: "Foto bersama pihak sekolah dan dosen pembimbing." },
-        { type: 'image', src: asistensi4, caption: "Foto bersama pihak sekolah dan dosen pembimbing." },
-        { type: 'image', src: asistensi5, caption: "Foto bersama pihak sekolah dan dosen pembimbing." },
-        { type: 'image', src: asistensi6, caption: "Foto bersama pihak sekolah dan dosen pembimbing." }
+        { type: 'image', src: asistensi1, caption: "Melakukan observasi di kelas saat sesi pembelajaran bersama Guru Pamong - Flowchart" },
+        { type: 'image', src: asistensi3, caption: "Melakukan observasi di kelas saat sesi pembelajaran bersama Guru Pamong - Flowchart"},
+        { type: 'image', src: asistensi4, caption: "Melakukan observasi di kelas saat sesi pembelajaran bersama Guru Pamong - Flowchart" },
+        { type: 'image', src: asistensi2, caption: "Melakukan observasi di kelas saat sesi pembelajaran bersama Guru Pamong - Penggunaan Excel" },
+        { type: 'image', src: asistensi5, caption: "Melakukan observasi di kelas saat sesi pembelajaran bersama Guru Pamong - Penggunaan Excel." },
+        { type: 'image', src: asistensi6, caption: "Melakukan observasi di kelas saat sesi pembelajaran bersama Guru Pamong - Penggunaan Excel" }
       ]
     },
+    praktek: {
+      title: "Praktek Mengajar",
+      desc: "Kegiatan melakukan praktek pembelajaran di kelas selama PPL Terbimbing.",
+      media: [
+        { type: 'image', src: praktekMengajar1, caption: "Pertemuan 1 di X Teknik Permesinan dengan materi Literasi Digital - Search Engine dan Browser" },
+        { type: 'image', src: praktekMengajar6, caption: "ertemuan 1 di X Teknik Permesinan dengan materi Literasi Digital - Search Engine dan Browser" },
+        { type: 'image', src: praktekMengajar5, caption: "Pertemuan 2 di X Teknik Permesinan dengan materi Literasi Digital - Kebenaran Informasi Digital" },
+        { type: 'image', src: praktekMengajar2, caption: "Pertemuan 1 di X TITL 4 dengan materi Literasi Digital - Search Engine dan Browser" },
+        { type: 'image', src: praktekMengajar4, caption: "Pertemuan 1 di X TITL 4 dengan materi Literasi Digital - Search Engine dan Browser" },
+        { type: 'image', src: praktekMengajar3, caption: "Pertemuan 2 di X TITL 4 dengan materi Literasi Digital - Kebenaran Informasi Digital" }
+      ]
+    },
+    
     pamong: {
       title: "Bimbingan Guru Pamong",
       desc: "Sesi diskusi rutin, konsultasi perangkat ajar, dan refleksi harian bersama Guru Pamong.",
       media: [
-        { type: 'image', src: bimbinganGP1, caption: "Sesi diskusi dan penyerahan secara resmi di sekolah." },
-        { type: 'image', src: bimbinganGP2, caption: "Foto bersama pihak sekolah dan dosen pembimbing." },
-        { type: 'image', src: bimbinganGP3, caption: "Foto bersama pihak sekolah dan dosen pembimbing." },
-        { type: 'image', src: bimbinganGP4, caption: "Foto bersama pihak sekolah dan dosen pembimbing." },
-        { type: 'image', src: bimbinganGP5, caption: "Foto bersama pihak sekolah dan dosen pembimbing." }
+        { type: 'image', src: bimbinganGP1, caption: "Bimbingan bersama Guru Pamong, Bu Lili Kartikawati terkait ide pembelajaran berbasis Project - 1 April 2026" },
+        { type: 'image', src: bimbinganGP2, caption: "Bimbingan bersama Guru Pamong, Bu Lili Kartikawati terkait ide pembelajaran berbasis Project - 1 April 2026" },
+        { type: 'image', src: bimbinganGP3, caption: "Bimbingan bersama Guru Pamong, Bu Lili Kartikawati terkait ide pembelajaran berbasis Project - 1 April 2026" },
+        { type: 'image', src: bimbinganGP4, caption: "Bimbingan bersama Guru Pamong, Bu Lili Kartikawati terkait Memperkenalkan permasalahan di sekolah kepada mahasiswa PPL - 25 April 2026" },
+        { type: 'image', src: bimbinganGP5, caption: "Bimbingan bersama Guru Pamong, Bu Lili Kartikawati terkait Refleksi penugasan administrasi mahasiswa PPL - 25 April 2026" }
       ]
     },
     dpl: {
       title: "Bimbingan DPL",
       desc: "Konsultasi berkala bersama Dosen Pembimbing Lapangan terkait progres dan laporan PPL.",
       media: [
-        { type: 'image', src: bimbinganDPL1, caption: "Sesi diskusi dan penyerahan secara resmi di sekolah." },
-        { type: 'image', src: bimbinganDPL2, caption: "Foto bersama pihak sekolah dan dosen pembimbing." },
-        { type: 'image', src: bimbinganDPL3, caption: "Foto bersama pihak sekolah dan dosen pembimbing." }
+        { type: 'image', src: bimbinganDPL1, caption: "Foto bersama Dosen Pembimbing Lapangan dan Guru Pamong setelah melakukan bimbingan" },
+        { type: 'image', src: bimbinganDPL2, caption: "Foto bersama Dosen Pembimbing Lapangan dan Guru Pamong setelah melakukan bimbingan" },
+        { type: 'image', src: bimbinganDPL3, caption: "Bimbingan bersama Dosen Pembimbing Lapangan dan Guru Pamong terkait progres pelaksanaan PPL" }
       ]
     }
   };
