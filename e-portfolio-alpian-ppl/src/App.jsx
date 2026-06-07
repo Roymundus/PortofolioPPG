@@ -54,7 +54,7 @@ function App() {
         <div className="sidebar-header">
           <div className="nav-brand">
             <img src={logoUNY} alt="Logo UNY" className="logo" />
-            E-Portofolio
+            E-Portfolio | PPG
           </div>
           <button className="btn-close" onClick={() => setIsSidebarOpen(false)}>
             &times;
