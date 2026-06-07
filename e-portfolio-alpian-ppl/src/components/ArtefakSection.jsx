@@ -164,7 +164,7 @@ export default function ArtefakSection() {
         </div>
 
         {/* Tombol Tab Analisis (Tema Terang) */}
-        <div style={{ display: 'flex', gap: '10px', overflowX: 'auto', paddingBottom: '10px', marginBottom: '2rem', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', gap: '10px', overflowX: 'auto', paddingBottom: '10px', marginBottom: '2rem', WebkitOverflowScrolling: 'touch' }}>
           {Object.keys(analysisData).map((key) => (
             <button
               key={key}
@@ -182,6 +182,7 @@ export default function ArtefakSection() {
                 gap: '8px',
                 transition: 'all 0.3s ease',
                 whiteSpace: 'nowrap',
+                flex: '0 0 auto',
                 boxShadow: activeAnalysis === key ? '0 4px 10px rgba(37, 99, 235, 0.2)' : 'none'
               }}
             >

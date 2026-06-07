@@ -36,7 +36,7 @@ function App() {
       <div className="mobile-header">
         <div className="nav-brand">
           <img src={logoUNY} alt="Logo UNY" className="logo" />
-          E-Portofolio | Alpian Roymundus Siringo-ringo
+          E-Portfolio |PPG
         </div>
         <button className="btn-menu" onClick={() => setIsSidebarOpen(true)}>
           <i className="fas fa-bars"></i>

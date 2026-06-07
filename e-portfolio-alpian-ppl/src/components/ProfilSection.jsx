@@ -64,10 +64,12 @@ export default function ProfilSection() {
           <h2 style={{ 
             margin: '1.5rem 0 0.4rem 0', 
             color: 'var(--text-main)', 
-            fontSize: '2.4rem', 
+            fontSize: 'clamp(1.6rem, 5vw, 2.4rem)', 
             textAlign: 'center', 
             fontWeight: '800',
-            letterSpacing: '-0.5px'
+            letterSpacing: '-0.5px',
+            wordBreak: 'break-word',
+            width: '100%'
           }}>
             Alpian Roymundus Siringo-ringo
           </h2>
@@ -76,7 +78,7 @@ export default function ProfilSection() {
             margin: '0', 
             color: 'var(--primary)', 
             fontWeight: '700', 
-            fontSize: '1.2rem', 
+            fontSize: 'clamp(1rem, 3vw, 1.2rem)', 
             textAlign: 'center', 
             letterSpacing: '0.5px' 
           }}>
