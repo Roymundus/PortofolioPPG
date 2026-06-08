@@ -30,12 +30,6 @@ export default function ArtefakSection() {
       icon: 'fa-clipboard-check',
       embedUrl: 'https://drive.google.com/file/d/1BLVxE0hpquFV9FN-6jbAE2g7MuRVn7Zs/preview'
     },
-    lkm: {
-      title: 'LKM - Lembar Kerja Murid',
-      desc: 'Lembar Kerja Murid digital memandu kolaborasi dan memecahkan masalah.',
-      icon: 'fa-laptop-code',
-      embedUrl: 'https://drive.google.com/drive/folders/1MXiMQ6eTFJVTm6O-nVv9nx5FKQIRfXk4?usp=drive_link'
-    },
     pantauan: {
       title: 'Pantauan Progres',
       desc: 'Dokumen hasil monitoring perkembangan, evaluasi formatif, dan rubrik penilaian siswa.',
