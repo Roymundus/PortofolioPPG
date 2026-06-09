@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 export default function ArtefakSection() {
   // 1. State untuk navigasi Tab Dokumen Pembelajaran
-  const [activeDoc, setActiveDoc] = useState('asesmen');
+  const [activeDoc, setActiveDoc] = useState('rpp');
   
   // 2. State untuk navigasi Tab Analisis
   const [activeAnalysis, setActiveAnalysis] = useState('kendala');
